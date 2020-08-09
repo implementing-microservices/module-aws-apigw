@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {  
+            "Effect":"Allow",
+            "Action":[  
+               "ec2:CreateVpcEndpointServiceConfiguration",
+               "ec2:DeleteVpcEndpointServiceConfigurations",
+               "ec2:DescribeVpcEndpointServiceConfigurations",
+               "ec2:ModifyVpcEndpointServicePermissions"
+            ],
+            "Resource":"*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "elasticloadbalancing:Describe*",
+            "Resource": "*"
+        }
+    ]
+}
